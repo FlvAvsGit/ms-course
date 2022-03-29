@@ -1,4 +1,4 @@
-package resources;
+package com.flavio.hrworker.resources;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,9 +14,9 @@ import com.flavio.hrworker.entities.Worker;
 import com.flavio.hrworker.repositories.WorkerRepository;
 
 @RestController
-@RequestMapping(value = "/workers")
+@RequestMapping("/workers")
 public class WorkerResource {
-	
+
 	@Autowired
 	private WorkerRepository workerRepository;
 	
@@ -35,5 +35,5 @@ public class WorkerResource {
 		return ResponseEntity.notFound().build();
 		
 	}
-	
+		
 }
